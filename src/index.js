@@ -1,4 +1,7 @@
 import { bootstrap } from './own-framework/core/bootstrap';
 import { appModule } from './app/app.module';
+import { wfm } from './own-framework/index'
 
-bootstrap(appModule);
+wfm.delay().then(() => {
+    bootstrap(appModule);
+});

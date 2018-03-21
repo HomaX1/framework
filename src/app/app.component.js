@@ -1,3 +1,5 @@
+//This file is a root component that response for the template of our application
+
 import { FWComponent } from '../own-framework/index';
 
 class AppComponent extends FWComponent {
@@ -9,9 +11,8 @@ class AppComponent extends FWComponent {
 export const appComponent = new AppComponent({
     selector: 'app-root',
     template: `
-        <div>
-            <h4>App component works</h4>
-            <h6>Does it really works?</h6>
-        </div>
-`
+        <app-header></app-header>
+        
+        <router-outlet></router-outlet>
+    `
 });

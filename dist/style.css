@@ -1,0 +1,34 @@
+.brand-logo {
+    margin-left: 20px;
+}
+
+.card {
+     margin-top: 40px;
+ }
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-find__text {
+    color: #d50000;
+}
+
+.not-find__link {
+    text-align: center;
+    background-color: #006064;
+}
+
+.not-find__link:hover {
+    background-color: #00838f;
+}
