@@ -1,10 +1,12 @@
-.brand-logo {
-    margin-left: 20px;
+.logo-title {
+    text-align: center;
 }
 
-.card {
-     margin-top: 40px;
- }
+.brand-logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #006064;
+}
 
 .preloader {
     display: flex;
@@ -12,6 +14,15 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+}
+
+.tab-one {
+    width: 800px;
+    margin: 60px auto 0;
+}
+
+.tab-one__title {
+    text-align: center;
 }
 
 .error {

@@ -5,6 +5,7 @@ export class Component {
         this.el = null;
     }
 
+    //Create render for all templates
     render() {
         this.el = document.querySelector(this.selector);
 

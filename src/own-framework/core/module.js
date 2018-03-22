@@ -1,31 +1,33 @@
 import { router } from '../tools/router';
 import { wfm } from '../tools/util';
 
-
 export class Module {
     constructor(config) {
         this.components = config.components;
-        this.bootstrapComponent = config.bootstrap;
+        this.initialBootComponent = config.initialBoot;
         this.routes = config.routes;
     }
 
-    //start our module
+    //Start our module
     start() {
         this.initComponents();
         if (this.routes) this.initRoutes();
 
     }
 
+    //Add components and rendering them
     initComponents() {
-        this.bootstrapComponent.render();
+        this.initialBootComponent.render();
         this.components.forEach(this.renderComponent.bind(this));
     }
 
+    //Attach an event to change hash for different templates and rendering them
     initRoutes() {
         window.addEventListener('hashchange', this.renderRoute.bind(this));
         this.renderRoute();
     }
 
+    //Render routes
     renderRoute() {
         let url = router.getUrl();
         let route = this.routes.find(routItem => routItem.path === url);
@@ -38,6 +40,7 @@ export class Module {
         this.renderComponent(route.component);
     }
 
+    //Render component
     renderComponent(component) {
         component.render();
     }

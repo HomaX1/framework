@@ -1,6 +1,8 @@
+//Do emulation of the request to the server to create preloader
+
 const wfm = {
     delay(ms = 1000) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 resolve();
             }, ms)

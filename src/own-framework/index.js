@@ -1,15 +1,13 @@
 import { Module as FWModule } from './core/module'
 import { Component as FWComponent } from './core/component'
-import { bootstrap } from './core/bootstrap'
+import { initialBoot } from './core/initial-boot'
 import { wfm } from './tools/util'
 import { router } from './tools/router'
-
-
 
 export {
     FWModule,
     FWComponent,
-    bootstrap,
+    initialBoot,
     wfm,
     router
 }

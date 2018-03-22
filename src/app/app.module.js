@@ -1,8 +1,9 @@
 import { FWModule } from '../own-framework/index';
 import { appComponent } from './app.component';
 import { appHeader } from './common/app.header';
-import {appRoutes} from "./app.routes";
+import { appRoutes } from './app.routes';
 
+//Create AppModule class, that inherits main module FWModule
 class AppModule extends FWModule {
     constructor(config) {
         super(config);
@@ -15,7 +16,7 @@ export const appModule = new AppModule({
     components: [
         appHeader
     ],
-    bootstrap: appComponent,
+    initialBoot: appComponent,
     routes: appRoutes
 });
 
